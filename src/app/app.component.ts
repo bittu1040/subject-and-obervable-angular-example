@@ -34,7 +34,6 @@ export class AppComponent {
       this.subjectData= data;
     })
 
-    mySubject.next([2,2,3,4,5]);
     mySubject.next("Please go to office");
     mySubject.next([2,2,3,4,5]);
   }
