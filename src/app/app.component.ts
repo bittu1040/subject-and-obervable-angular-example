@@ -22,8 +22,16 @@ export class AppComponent {
 
 
     const source = of(1, 2, 3, 4, 5);
-    source.subscribe((data)=>{
+    source.subscribe({
+      next:(data)=>{ 
       this.observableData_1= data;
+      }, 
+      error: (error)=>{
+        console.log(error)
+      },
+      complete:()=>{
+        console.log(this.observableData)
+      }
     })
   }
 
